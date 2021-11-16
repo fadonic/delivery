@@ -1,0 +1,147 @@
+.container_max{
+  width: 95%;
+  margin: 0 auto
+}
+
+.auth__container{
+  padding: 5rem 2rem;
+  margin-left: 200px;
+  height: calc(100vh - 3rem);
+  gap: 0rem;
+}
+
+.goback__btn__container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.go__backBtn{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+
+.go__backBtn{
+  display:flex;
+  align-items:center; 
+  justify-content: flex-end;
+  color:#333;
+  font-weight:500;
+  margin-bottom: 2rem;
+}
+.go__backBtn:focus{
+  color: #333;
+  outline: none;
+}
+
+.go__backBtn:hover{
+  color: #000;
+}
+
+.go__backBtn .icon{
+  margin-right:.25rem;
+  font-size:1rem;
+  font-weight: 600;
+}
+
+.button{
+  cursor: pointer !important;
+}
+
+.mb-2{
+  margin-bottom: 2rem;
+}
+
+.badge__label{
+  display: inline;
+  padding: .2em .6em .3em;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #888;
+}
+
+.badge__label-small{
+  font-size: 75%;
+}
+
+.danger{
+  background-color: rgb(240, 107, 107);
+  color: #fff;
+}
+
+.success{
+  background-color: rgb(86, 172, 69);
+  color: #fff;
+}
+
+.open{
+  background-color: rgb(218, 144, 144);
+  color: #fff;
+}
+
+.closed{
+  background-color: rgb(110, 231, 219);
+  color: #fff;
+}
+
+.form__control label, .form__control input, .form__control textarea{
+  width: 100%;
+  display: block;
+ }
+ 
+ .form__control{
+   margin-bottom: 1rem;
+ }
+ 
+ .form__control label{
+   margin-bottom: 0.5rem;
+ }
+ 
+ .form__control input, .form__control textarea{
+   border: 1px solid #ddd;
+   margin-bottom: 1rem;
+   padding:1rem;
+ }
+
+ .form__control input{
+   height: 2rem;
+ }
+
+ .form__control textarea{
+   height: 7rem;
+   width: 100%;
+ }
+ 
+ .form__control input:focus, .form__control textarea:focus{
+   outline: none;
+ }
+ 
+ .form__actions button, .btn{
+   font: inherit;
+   border: none;
+   background: rgb(124, 99, 238);
+   color: #fff;
+   margin-right: 1rem;
+   padding: .5rem 1rem;
+   cursor: pointer;
+   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
+ }
+ 
+ .form__actions button:hover, .form-actions button.active, .btn:hover, .btn.active{
+   background-color: rgb(89, 61, 216);
+   border-color: rgb(89, 61, 216);
+ }
+
+ .nav__link-btn{
+   border:none;
+   background-color: transparent;
+   cursor: pointer;
+   color: inherit;
+ }

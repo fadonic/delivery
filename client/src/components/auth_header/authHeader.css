@@ -1,0 +1,26 @@
+.auth__header{
+ 
+}
+
+.auth__header{
+  height: var(--header-height);
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+}
+
+.auth__header .nav{
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth__header .nav .nav__link{
+  font-size: .895rem;
+  font-weight: 400!important;
+}
+

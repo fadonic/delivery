@@ -1,0 +1,6 @@
+.register{
+  margin-top: var(--mb-3);
+}
+Link{
+  cursor: pointer;
+}

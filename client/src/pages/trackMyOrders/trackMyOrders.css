@@ -1,0 +1,52 @@
+.track__my__order h2{
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.track__order__container{
+  display: flex;
+}
+
+
+.track__data{
+  box-shadow: 0 2px 2px rgb(10 16 20 / 24%), 0 0 2px rgb(10 16 20 / 12%);
+  margin-bottom: 3rem;
+  /* background-color: #fdfdfb; */
+  padding: 1rem;
+  /* border-top: 2px solid rgb(186, 241, 245); */
+  border-radius: 3px;
+}
+
+.track__data small{
+  color: #9ea9a8;
+  margin-top: 2rem;
+}
+
+.track__data h2{
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  color: rgb(0 0 0 / 70%);
+}
+
+.track__data h3{
+  margin-bottom: .5rem;
+  font-size: .85rem;
+  color: rgb(0 0 0 / 70%);
+}
+
+.track_order__description{
+  line-height: 1.6;
+  font-size: .85rem;
+}
+
+.table__title{
+  margin-bottom: 1.5rem; 
+  font-size: 1rem;
+  margin-left: 1rem
+}
+@media screen and (min-width: 998px) {
+  .track__data{
+    width: 100%;
+  }
+ 
+}

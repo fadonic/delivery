@@ -1,0 +1,16 @@
+.my__order h2{
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.neworder__btn__container{
+  text-align: right;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 998px) {
+  .order__data{
+    width: 45%;
+  }
+ 
+}

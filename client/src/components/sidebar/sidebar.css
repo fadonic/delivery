@@ -1,0 +1,34 @@
+.sidebar{
+  width: 200px;
+  height: 100vh;
+  background-color: #fafafa;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 3rem;
+}
+
+.sidebar__menu{
+  height: 100%;
+  font-size: 15px;
+}
+
+.sidebar__list{
+  padding-top: 2rem;
+}
+.sidebar__item{
+  padding: .7rem 2rem
+}
+
+.sidebar__item.label{
+  /* color: #333; */
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: 600;
+}
+
+.sidebar__link{
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+

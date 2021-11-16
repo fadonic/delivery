@@ -1,0 +1,95 @@
+.my__tickets h2{
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.newticket__btn__container{
+  margin-right: 5rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ticketDetails__data{
+  /* box-shadow: 0 2px 2px rgb(10 16 20 / 24%), 0 0 2px rgb(10 16 20 / 12%); */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.ticketDetails__data p{
+  font-size: .85rem;
+  line-height: 1.65;
+}
+
+.ticketDetails__data__header{
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  padding: .35rem 0;
+  position: relative;
+}
+
+.ticketDetails__data__header .date{
+  position: absolute;
+  right: 1rem;
+  font-size: .65rem;
+}
+
+.ticketDetails__data__body .message{
+  margin-bottom: 1rem;
+}
+
+.ticketDetails_userinfo .name{
+  margin-right: .5rem;
+}
+
+.ticketDetails_userinfo .role{
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+
+.ticketDetails__Icon{
+  margin-right: .85rem;
+  margin-left: .5rem;
+  font-size: 2rem !important;
+}
+.ticketDetails__data__body{
+  padding:2rem .75rem;
+}
+
+.ticketDetails__new{
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  font-size: .952rem;
+  border-radius: 3px;
+  padding: .35rem 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.ticketDetails__new .icon{
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.ticketDetails__new_left{
+  display: flex;
+  align-items: center;
+}
+
+.ticketDetails__new_left .icon{
+  margin-right: .5rem;
+}
+
+
+@media screen and (min-width: 998px) {
+  .ticketDetails__data{
+    width: 100%;
+  }
+ 
+}

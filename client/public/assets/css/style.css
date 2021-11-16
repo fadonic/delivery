@@ -1,0 +1,671 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* =============== VARIABLES CSS ==================*/
+:root{
+  --header-height: 3rem;
+  /* =============== colors======================= */
+  --hue: 172;
+  --sat: 92%;
+  --first-color: hsl(var(--hue), var(--sat), 60%);
+  --first-color-light: hsl(var(--hue), var(--sat), 85%);
+  --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 45%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+  --scroll-bar-color: hsl(var(--hue), 4%, 85%);
+  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+
+  /* ================== FONTS AND TYPOGRAPHY ===========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========== Margenes ==========*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* ============= BASIC CSS =========== */
+*,::before, ::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .5s  animation dark mode
+}
+
+h1,h2,h3{
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  line-height: 1.5;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* =============== LAYOUT ================== */
+
+.section{
+  padding: 4.5rem 0 1rem;
+}
+
+.section .section__title, .section__title-center{
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align:center;
+  margin-bottom: var(--mb-1);
+}
+
+.svg__color{
+      fill: var(--first-color);
+}
+.svg__blob{
+      fill: var(--first-color-light);
+}
+.svg__img{
+      width: 300px;
+      justify-self: center;
+}
+
+
+/*=============== LAYOUT ===============*/
+.container{
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+/* =============== text center =========== */
+
+.text-center{
+  text-align: center!important;
+}
+
+/* =============== buttons ============== */
+
+.button.button__header{
+  display: none;
+}
+
+/* ================= header ================ */
+
+.header{
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .5s;
+}
+
+/* ================= nav ==================== */
+
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu{
+     position: fixed;
+     background-color: var(--body-color);
+     box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+     width: 90%;
+     top: -100%;
+     padding: 2.5rem  0;
+     margin: 0 auto;
+     transition: .4s;
+     z-index: var(--z-fixed);
+  }
+  .nav__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+}
+
+.nav__link, .nav__logo, .nav__toggle{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__toggle{
+  cursor: pointer;
+}
+/* =============== Button =============== */
+
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #1a1a1a;
+  font-weight: var(--font-semi-bold);
+  padding: .75rem 1.5rem;
+  border-radius: 2rem ;
+  transition: .3s;
+}
+
+.button-link{
+ 
+}
+
+.button-link:hover{
+   background-color: var(--first-color-alt);
+}
+
+
+/* ============== show menu ============ */
+.show-menu{
+  top: calc(var(--header-height) + 1rem);
+}
+
+/* ============== show scroll ============ */
+
+.show-scroll{
+  bottom: 5rem !important;
+}
+
+/* ============== ACTIVE CSS ========== */
+.active-link{
+  position: relative;
+}
+
+.active-link::before{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  left: 45%;
+  bottom: -10px;
+  border-radius: 50%;
+}
+
+/* ============== SCROLL CSS =========== */
+.scroll-header{
+box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+/* ===================== HOME ============= */
+
+.home__container{
+  row-gap: 3rem;
+}
+
+.home__title{
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-0-75);
+}
+
+.home__description{
+  margin-bottom: var(--mb-2);
+}
+
+
+/* =============== ABOUT =================== */
+
+.about__container{
+  row-gap: 2.5rem;
+}
+
+.about__data{
+  text-align: center;
+}
+
+/* =============== SECURITY================ */
+.security__container{
+  row-gap: 2.5rem;
+}
+.security__data{
+  text-align: center;
+}
+
+
+/* =============== SERVICES =============== */
+
+.services__container{
+  padding-top: 1rem;
+}
+
+.services__data{
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--container-color);
+  box-shadow: 0 2px 6px hsla(var(--hue), 100%, 15%, .5);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.services__container img{
+  width: 135px;
+  justify-self: center;
+  margin-bottom: var(--mb-0-5);
+}
+
+/* ================ APP ==================== */
+
+.app__container{
+  row-gap: 2.5rem;
+}
+
+.app__data{
+  text-align: center;
+}
+
+.app__description{
+  margin-bottom: var(--mb-2);
+}
+
+.app__buttons{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  gap: .5rem
+}
+
+.app__buttons .button__icon{
+  font-size: 1.5rem;
+}
+
+.app__buttons .button-flex{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  padding: .75rem  1rem;
+  font-size: var(--first-color);
+}
+
+
+/* ================== CONATCT US =============== */
+
+.contact__container{
+  padding-bottom: 3rem;
+}
+
+.contact__description{
+  text-align: center;
+}
+
+.contact__content{
+  row-gap: .75rem;
+}
+.contact__address{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.contact__information{
+  font-weight: initial;
+  margin-left: .5rem;
+  color: var(--text-color);
+}
+
+/* ================ REGISTER ========== */
+
+.register__description{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.register__data{
+  text-align: center;
+}
+
+.register__form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: var(--mb-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  padding: 3rem 2.5rem;
+}
+
+.form__input{
+  margin-bottom: var(--mb-2);
+  height: 2.5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--text-color)
+}
+
+.form__input:focus{
+  outline: none;
+}
+
+.form__button{
+  margin-bottom: var(--mb-2);
+  border: none;
+  width: 10rem;
+}
+
+/* =============== FOOTER ============ */
+
+.footer{
+  background-color: var(--first-color-lighten);
+  padding-bottom: var(--mb-2);
+}
+
+.footer__container{
+  row-gap: 2rem;
+}
+
+.footer__logo, .footer__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.footer__logo{
+  display: inline-block;
+  font-weight: var(--font-semi-bold) ;
+  color: var(--title-color);
+}
+
+.footer__description, .footer__link{
+  font-size: var(--normal-font-size);
+}
+
+.footer__links{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.footer__social{
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 1.5rem;
+}
+
+.footer__social-link{
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.footer__copy{
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* ================= SCROLL UP ================ */
+
+.scrollup{
+  position: fixed;
+  background-color: var(--first-color);
+  bottom: -20%;
+  right: 1rem;
+  padding: .3rem;
+  display: inline-flex;
+  border-radius: .25rem;
+  z-index: var(--z-tooltip);
+  opacity: .8;
+  transition: .4s;
+}
+
+.scrollup:hover{
+  background: var(--first-color-alt) ;
+}
+
+.scrollup .scrollup__icon{
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+/* ================== SCROLL BAR =============== */
+
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb-color);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--text-color-light);
+}
+
+/* ================== THEME =================== */
+
+/* =========== Variable Dark theme ===== */
+body.dark-theme{
+  --first-color-light: hsl(var(--hue), var(--sat), 75%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 80%);
+  --body-color: hsl(var(--hue), 8%, 13%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+  --scroll-bar-color: hsl(var(--hue), 4%, 32%);
+  --scroll-thumb-color: hsl(var(--hue), 4%, 24%);
+}
+
+/* ================= button dark light ========== */
+
+.change-theme{
+  position: absolute;
+  right: 1.5rem;
+  top: 2.5rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dark-theme .footer{
+  background-color: var(--container-color);
+}
+
+/* =============== media query ================= */
+/* ================ Small scree ================ */
+@media screen and (max-width: 360px){
+  .svg__color{
+    width: 100%;
+  }
+  .section{
+    padding: 3.5rem 0 1rem;
+  }
+  .services__img, .app__img{
+    width: 100px;
+  }
+
+  .app__buttons{
+    grid-template-columns: max-content;
+  }
+}
+
+/* =============== Medium screen =============== */
+@media  screen and (min-width: 567px) {
+  .svg__img{
+    width: 100%;
+  }
+
+  .section__title-center{
+    text-align: initial;
+  }
+
+  .home__container, .about__container, .register__container, .security__container, .services__container, .app__container, .contact__container, .footer__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home img{
+    order: 1
+  }
+
+  .home__container, .app__container, .about__container, .contact__container, .security__container{
+    align-items: center;
+  }
+
+  .about__data, .security__data, .app__data, .contact__description{
+    text-align: initial;
+  }
+
+  .app__buttons {
+    justify-content: start;
+  }
+
+  .about img, .app img{
+    order: -1;
+  }
+
+  .services .section__title-center{
+    text-align: center;
+  }
+
+  .register__container{
+    gap: 4rem;
+  }
+}
+
+@media  screen and (min-width: 767px) {
+  body{
+    margin: 0;
+  }
+
+  .section{
+    padding: 4.5rem 0 2rem
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav__toggle{
+    display: none;
+  }
+
+  .change-theme{
+    position: initial;
+  }
+
+  .home__container{
+    padding: 4.5rem 0 2rem
+  }
+
+
+}
+
+/* ================ large screen ============== */
+
+@media screen and (min-width: 968px){
+  .button.button__header{
+    display: block;
+  }
+
+  .svg__img{
+    width: 570px;
+  }
+
+  .about__container, .security__container, .app__container, .contact__container{
+    column-gap: 6rem;
+  }
+
+  .services__container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact__container{
+    grid-template-columns: 3fr 1.5fr 1.25fr;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer__social{
+    align-items: flex-start;
+  }
+  .footer__social-link{
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ============= lagest screen =============== */
+
+@media screen and (min-width: 1024px) {
+   .container{
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+   .home .svg__img{
+    width: 650px;
+  }
+
+  .home__description{
+    padding-right: 1.5rem;
+  }
+  .footer__container{
+    column-gap: 3rem;
+  }
+
+  .scrollup{
+    right: 3rem;
+  }
+}

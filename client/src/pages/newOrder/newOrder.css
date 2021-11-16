@@ -1,0 +1,19 @@
+
+.order__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: var(--mb-2);
+  border: 1px solid;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+  padding: 3rem 2.5rem;
+}
+
+
+@media screen and (min-width: 998px) {
+  .order__data{
+    width: 45%;
+  }
+ 
+}

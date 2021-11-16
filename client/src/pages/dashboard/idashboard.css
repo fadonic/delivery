@@ -1,0 +1,54 @@
+
+.itemDeleteButton{
+  cursor: pointer;
+}
+
+
+
+.dashboard__grid{
+  display: grid;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.dashboard__data{
+  width: 250px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgb(10 16 20 / 24%), 0 0 2px rgb(10 16 20 / 12%);
+  background-color: #fff;
+}
+
+.flex-end{
+  justify-self: flex-end
+}
+
+.flex-center{
+  justify-self: center;
+}
+
+.dashboard__data .subtitle{
+  margin: 2rem 0 1rem;
+}
+
+.dashboard__data .button{
+  margin-bottom: 1rem;
+}
+
+.dashboard__description{
+  margin: 1rem 0;
+  font-size: small;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard__grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 996px) {
+  .dashboard__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
