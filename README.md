@@ -9,12 +9,14 @@ The project consist of:
 * Client
 * Server
 
-### `To run the project`
+### `To configure and run the project`
 ```
 cd server
 npm install
 run npm start
+```
 
+```
 cd client
 npm install
 run npm start
@@ -33,7 +35,7 @@ run npm start
 * Mongo Db
 
 ## Contributing
-Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub. Please see the CONTRIBUTING guidelines for more information.
+Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub.
 
 This project was created with love :green_heart::+1:.
 
