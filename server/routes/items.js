@@ -59,7 +59,7 @@ router.get('/', verify, async (req, res) => {
   }
 })
 
-// get
+// get item by item
 router.get('/find/:id', verify, async (req, res) => {
   try {
     const item = await Item.findById(req.params.id)
@@ -75,29 +75,6 @@ router.get('/user_by_id', verify, async (req, res) => {
   try {
     const item = await Item.find({ userId: userId })
     res.status(200).json(item)
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
-// Random
-router.get('/random', verify, async (req, res) => {
-  const type = req.query.type
-  try {
-    let movies
-
-    if (type === 'series') {
-      movies = await Movie.aggregate([
-        { $match: { isSeries: true } },
-        { $sample: { size: 1 } }
-      ])
-    } else {
-      movies = await Movie.aggregate([
-        { $match: { isSeries: false } },
-        { $sample: { size: 1 } }
-      ])
-    }
-    res.status(200).json(movies)
   } catch (err) {
     res.status(500).json(err)
   }
