@@ -23,7 +23,6 @@ run npm start
 
 ### Client
 * React
-* React js
 * React Router
 * React Hooks
 * Context API
@@ -36,5 +35,5 @@ run npm start
 ## Contributing
 Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub. Please see the CONTRIBUTING guidelines for more information.
 
-This project was created with love:+1:.
+This project was created with love :green_heart::+1:.
 
